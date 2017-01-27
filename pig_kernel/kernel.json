@@ -9,9 +9,9 @@
     "display_name":"Pig",
     "language": "pig",
     "env": {
-        "JAVA_HOME": "/usr/lib/jvm/java-7-openjdk-amd64",
-        "PIG_HOME": "/opt/pig-0.15.0",
-        "HADOOP_HOME": "/opt/hadoop-2.6.4",
-        "LOG4J_CONF_FILE": "/root/log4j.properties"
+        "JAVA_HOME": "/usr/lib/jvm/java-8-openjdk-amd64/",
+        "PIG_HOME": "/usr/local/pig",
+        "HADOOP_HOME": "/usr/local/hadoop",
+        "LOG4J_CONF_FILE": ""
     }
 }
