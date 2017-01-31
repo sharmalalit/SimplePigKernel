@@ -11,7 +11,6 @@
     "env": {
         "JAVA_HOME": "/usr/lib/jvm/java-8-openjdk-amd64/",
         "PIG_HOME": "/usr/local/pig",
-        "HADOOP_HOME": "/usr/local/hadoop",
-        "LOG4J_CONF_FILE": ""
+        "HADOOP_HOME": "/usr/local/hadoop"
     }
 }
