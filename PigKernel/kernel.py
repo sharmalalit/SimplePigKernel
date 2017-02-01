@@ -58,7 +58,7 @@ class PigKernel(Kernel):
         if "LOG4J_CONF_FILE" in os.environ:
             opt += " -4 " + os.environ["LOG4J_CONF_FILE"];
         # Start grunt
-        self.pig = pexpect.spawn(os.environ["PIG_HOME"] + "/bin/pig -x local " + opt);
+        self.pig = pexpect.spawn(os.environ["PIG_HOME"] + "/bin/pig -x mapreduce " + opt);
 
         # Wait until grunt start
         self.pig.expect(GRUNT_NEW_LINE_MODEL, timeout=GRUNT_START_TIMEOUT);
