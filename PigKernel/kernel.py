@@ -41,7 +41,7 @@ class PigKernel(Kernel):
     implementation = 'Pig Kernel';
     implementation_version = '0.1';
     language = 'pig';
-    language_version = '0.15';
+    language_version = '0.16';
     language_info = {
         'name': "pig",
         'mimetype': 'text/x-pig',

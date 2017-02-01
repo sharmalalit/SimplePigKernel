@@ -21,7 +21,7 @@ setup(
     name='SimplePigKernel',
     version='0.1',
     description='A pig kernel for Jupyter',
-    url='http://gogs.atrevrix.fr/Jupyter/SimplePigKernel',
+    url='https://github.com/sharmalalit/SimplePigKernel',
     author='Christophe Nouchet',
     author_email='nouchet.christophe@gmail.com',
     license='GPLv3',
