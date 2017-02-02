@@ -18,6 +18,7 @@
 from ipykernel.kernelbase import Kernel
 import pexpect
 import os
+import sys
 
 # Author : Christophe NOUCHET
 # Email : nouchet.christophe@gmail.com
@@ -58,7 +59,8 @@ class PigKernel(Kernel):
         if "LOG4J_CONF_FILE" in os.environ:
             opt += " -4 " + os.environ["LOG4J_CONF_FILE"];
         # Start grunt
-        self.pig = pexpect.spawn("su - centos && " + os.environ["PIG_HOME"] + "/bin/pig -x mapreduce " + opt);
+        self.pig = pexpect.spawn("su -l centos  -c \"" + os.environ["PIG_HOME"] + "/bin/pig -x mapreduce " + opt + "\"");
+        self.pig.logfile = sys.stdout
 
         # Wait until grunt start
         self.pig.expect(GRUNT_NEW_LINE_MODEL, timeout=GRUNT_START_TIMEOUT);
