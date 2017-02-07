@@ -59,7 +59,7 @@ class PigKernel(Kernel):
         if "LOG4J_CONF_FILE" in os.environ:
             opt += " -4 " + os.environ["LOG4J_CONF_FILE"];
         # Start grunt
-        self.pig = pexpect.spawn("su -l centos  -c \"" + os.environ["PIG_HOME"] + "/bin/pig -x mapreduce " + opt + "\"");
+        self.pig = pexpect.spawn("su -l centos  -c \"" + os.environ["PIG_HOME"] + "/bin/pig -x local " + opt + "\"");
         self.pig.logfile = sys.stdout
 
         # Wait until grunt start
